@@ -1,0 +1,16 @@
+{ Atividade AA4.5: Número Primo (Algoritmo)}
+{ Antonio Josivaldo Dantas Filho }
+{ RA 580961 G7 Sistemas de Informação }
+
+função numeroPrimo (numero : inteiro) : inteiro
+	se (numero > 0) então
+		para i de 2 ate numero - 1 faça
+			se numero % i então
+				retorna 0
+			fim-se
+		fim-para
+		retorna 1
+	senão
+		retorna -1
+	fim-se
+fim-função

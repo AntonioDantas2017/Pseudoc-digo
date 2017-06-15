@@ -1,0 +1,22 @@
+Escreva um programa usando o assembly do MIPS para calcular as diferenças dos elementos dos vetores x e y e armazená-las no vetor v, ou seja, calcular v[i] = y[i] - x[i] para todas os elementos.
+
+.data
+x: .word 9, 8, 7, 6, 5, 4, 3, 2, 1, 0
+y: .word 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+v: .word 0:10
+.text
+li $t1, 0 # i = 0
+li $t2, 10 # contator de repeticao
+L1:
+lw $t3, x($t1) # carrega x[i]
+lw $t4, y($t1) # carrega y[i]
+sub $t5, $t4, $t3 # subtracao
+sw $t5, v($t1) # guarda v[i]
+
+add $t1, $t1, 4 # incrementa i
+sub $t2, $t2, 1 # decrementar contador
+bgtz $t2, L1 # salta se contador maior do que zero
+IM:
+addi $a0, $t3, 0 #imprime na tela
+addi $v0, $0, 1
+syscall

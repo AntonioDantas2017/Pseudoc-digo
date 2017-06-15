@@ -1,0 +1,33 @@
+{AA 3.1 Algoritmo para receber e contar positivos, negativos e nulos}
+
+constante maximo: inteiro <- 10
+
+algoritmo
+	{declaração variáveis}
+	declare
+		tipo vetor[maximo]: inteiro
+		i, positivos, negativos, nulos :inteiro
+	
+	{Realizando a leitura}
+	escreva("Favor digite os "+ maximo +" numeros na sequencia a seguir:")
+	para (i de 0 ate maximo)
+		escreva("Favor digite valor do numero o " + i+1)
+		leia(vetor[i])
+		
+		{Classificando e contando numeros}
+		se (vetor[i] > 0) entao
+			positivos <- positivos + 1 {Contando Positivos}
+		senao
+			se (vetor[i] = 0)
+				nulos <- nulos + 1 {Contando Nulos}
+			senao
+				negativos <- negativos + 1 {Contando Negativos}
+			fim-se
+		fim-se
+	fim-para
+	
+	{Exibir Resultados}
+	escreva("Quantidade de numeros negativos: " + negativos)
+	escreva("Quantidade de numeros positivos: " + positivos)
+	escreva("Quantidade de numeros nulos: " + nulos)
+fim-algoritmo

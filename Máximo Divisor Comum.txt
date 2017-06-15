@@ -1,0 +1,15 @@
+{ Atividade AA4.6: Máximo Divisor Comum (Algoritmo)
+{ Antonio Josivaldo Dantas Filho }
+{ RA 580961 G7 Sistemas de Informação }
+
+função MDC (n1, n2 : inteiro) : inteiro
+	declare 
+		resto : inteiro
+	resto <- n1 % n2
+	enquanto resto <> 0 faça
+		n1 <- n2
+		n2 <- resto
+		resto <- n1 % n2
+	fim-enquanto
+	return n2
+fim-função

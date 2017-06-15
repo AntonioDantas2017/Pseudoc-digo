@@ -1,0 +1,79 @@
+algoritmo {Início Algoritmo}
+
+	{Declarando novo tipo de Variável}
+	tipo	tProva : registro {incluindo variáveis dentro do registro}
+				prova1,
+				prova2,
+				prova3,
+				nota_media: real
+	   		 fim-registro
+
+	{Declarando novo tipo de Variável}
+	tipo	tAluno: registro {incluindo variáveis dentro do registro}
+				ra: inteiro
+				nome,
+				time,
+				endereco,
+				telefone: literal
+				provas: tProva
+		        fim-segistro
+
+	{Declarando as variável}			
+	declare aluno1, aluno2, aluno3, aluno4, aluno5:  tAluno	
+
+	{Atribuindo valores de inicialização nas variáveis de registros}
+	aluno1.ra <- 100
+	aluno2.ra <- 101
+	aluno3.ra <- 102
+	aluno1.nome <- 'Samuel'
+	aluno2.nome <- 'Eduarda'
+	aluno3.nome <- 'Antonio'
+	aluno1.time <- aluno2.time <- aluno3.time = 'Sao Paulo'
+	aluno1.endereco <- 'Rua A, 10'
+	aluno2.endereco <- 'Rua B, 20'
+	aluno3.endereco <- 'Rua C, 30'
+	aluno1.telefone <- '33333333'
+	aluno2.telefone <- '22222222'
+	aluno3.telefone <- '11111111'
+	aluno1.provas.prova1 <- 10
+	aluno2.provas.prova1 <- 2
+	aluno3.provas.prova1 <- 3
+	aluno1.provas.prova2 <- 8
+	aluno2.provas.prova2 <- 5
+	aluno3.provas.prova2 <- 6
+	aluno1.provas.prova3 <- 8
+	aluno2.provas.prova3 <- 5
+	aluno3.provas.prova3 <- 6
+	aluno1.provas.nota_media <- (aluno1.provas.prova1 + aluno1.provas.prova2 + aluno1.provas.prova3) / 3
+	aluno2.provas.nota_media <- (aluno2.provas.prova1 + aluno2.provas.prova2 + aluno2.provas.prova3) / 3
+	aluno3.provas.nota_media <- (aluno3.provas.prova1 + aluno3.provas.prova2 + aluno3.provas.prova3) / 3
+
+	
+	escreva 'Digite os dados do Aluno 4'
+	{Lendo dados para o Aluno 4}
+	leia(aluno4.ra)
+	leia(aluno4.nome)
+	leia(aluno4.time)
+	leia(aluno4.endereco)
+	leia(aluno4.telefone)
+	leia(aluno4.provas.prova1)
+	leia(aluno4.provas.prova2)
+	leia(aluno4.provas.prova3)
+	aluno4.provas.nota_media <- (aluno4.provas.prova1 + aluno4.provas.prova2 + aluno4.provas.prova3) / 3
+
+	{Atribuindo todos os dados do Aluno2 para o Aluno5}
+	aluno5 <- aluno2
+	escreva 'Digite o ra e o nome do Aluno 5'
+	{Alterando dados do Aluno5 por meio da leitura}
+	leia(aluno5.ra)
+	leia(aluno5.nome)
+	
+	{Escrevendo Dados dos Alunos}
+	escreva('RA Nome Time Endereco Telefone Prova1 Prova2 Prova3 Media')
+	escreva(aluno1.ra + aluno1.nome + aluno1.time + aluno1.endereco + aluno1.telefone + aluno1.provas.prova1  + aluno1.provas.prova2  + aluno1.provas.prova3 + aluno1.provas.nota_media)
+	escreva(aluno2.ra + aluno2.nome + aluno2.time + aluno2.endereco + aluno2.telefone + aluno2.provas.prova1  + aluno2.provas.prova2  + aluno2.provas.prova3 + aluno2.provas.nota_media)
+	escreva(aluno3.ra + aluno3.nome + aluno3.time + aluno3.endereco + aluno3.telefone + aluno3.provas.prova1  + aluno3.provas.prova2  + aluno3.provas.prova3 + aluno3.provas.nota_media)
+	escreva(aluno4.ra + aluno4.nome + aluno4.time + aluno4.endereco + aluno4.telefone + aluno4.provas.prova1  + aluno4.provas.prova2  + aluno4.provas.prova3 + aluno4.provas.nota_media)
+	escreva(aluno5.ra + aluno5.nome + aluno5.time + aluno5.endereco + aluno5.telefone + aluno5.provas.prova1  + aluno5.provas.prova2  + aluno5.provas.prova3 + aluno5.provas.nota_media)
+
+fim-algoritmo {Fim do Algoritmo}

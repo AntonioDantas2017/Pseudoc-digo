@@ -1,0 +1,26 @@
+algoritmo {Início Algoritmo}
+
+       {Declarando novo tipo de Variável}
+       tipo tLocalidade : registro {incluindo variáveis dentro do registro}
+				tipo,
+				nome,
+				complemento : literal
+				numero : inteiro
+			  fim-registro
+
+	{Declarando novo tipo de Variável}
+	tipo tEndereco : registro {incluindo variáveis dentro do registro}
+				localidade : tLocalidade
+				bairro,
+				cidade,
+				estado,
+				pais : literal
+				cep,
+				caixaPostal : inteiro
+			fim-registro
+
+	{Declarando as variável}
+	declare 
+		endereco : tEndereco
+
+fim-algoritmo {Fim do Algoritmo}

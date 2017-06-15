@@ -1,0 +1,68 @@
+{ Atividade AA4.1 Multiplicação de Números Racionais (Algoritmo) }
+{ Antonio Josivaldo Dantas Filho }
+{ RA 580961 G7 Sistemas de Informação }
+
+{ a partir de dois números racionais, calcular e apresentar a soma e a multiplicação de ambos }
+
+{ definição do tipo }
+tipo tRacional: registro
+	numerador, denominador: inteiro
+fim-registro
+
+procedimento simplifiqueRacional(var racional: tRacional) { modifica um racional para que fique na forma mais simples }
+	declare valor1, valor2, resto: inteiro
+	{ cálculo do MDC }
+	valor1 <- racional.numerador
+ 	valor2 <- racional.denominador
+ 	faça
+ 		resto <- valor1 % valor2
+		valor1 <- valor2
+		valor2 <- resto
+ 	até resto = 0 { resultado do MDC fica em valor1 }
+
+ 	{ simplificação da razão }
+ 	racional.numerador <- racional.numerador/valor1
+ 	racional.denominador <- racional.denominador/valor1
+fim-procedimento
+
+{Foi criado várias funções por ser diferentes multiplicações e a chamda da função ser unicamente do tipo tRacional}
+
+{ Função para multiplicar Denominadores }
+função MultiplicaRacional1 (r1: tRacional, r2: tRacional) : tRacional
+	retorna r1.denominador * r2.denominador
+fim-função
+
+{ Função para multiplicar Numeradores }
+função MultiplicaRacional2 (r1: tRacional, r2: tRacional) : tRacional
+	retorna r1.numerador * r2.numerador
+fim-função
+
+{ Função para multiplicar Soma de Numeradores e Denominadores }
+função MultiplicaRacional3 (r1: tRacional, r2: tRacional) : tRacional
+	retorna r1.numerador * r2.denominador + r1.denominador * r2.numerador
+fim-função
+
+
+algoritmo
+	declare número1, número2, resultado: tRacional
+
+	{ obtenção dos números }
+	leia(número1.numerador, número1.denominador)
+	leia(número2.numerador, número2.denominador)
+
+	{ cálculo da soma }
+	resultado.numerador <- MultiplicaRacional3(número1,número2)
+	resultado.denominador <- MultiplicaRacional1(número1,número2)
+	simplifiqueRacional(resultado)
+
+	{ escrita da soma }
+	escreva(resultado.numerador, “/”, resultado.denominador)
+	
+	{ cálculo do produto }
+	resultado.numerador <- MultiplicaRacional2(número1,número2)
+	resultado.denominador <- MultiplicaRacional1(número1,número2)
+	simplifiqueRacional(resultado)
+	
+	{ escrita do produto }
+	escreva(resultado.numerador, “/”, resultado.denominador)
+fim-algoritmo

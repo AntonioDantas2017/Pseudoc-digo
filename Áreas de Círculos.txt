@@ -1,0 +1,31 @@
+algoritmo {Início Algoritmo}
+	
+	{Declarando novo tipo de Variável}	
+	tipo tCirculo : registro {incluindo variáveis dentro do registro}
+				pontoX,
+				pontoY,
+				raio: real
+			fim-registro
+
+	{Declarando as variável}
+	declare 
+		circulo : tCirculo
+		i : inteiro
+		area : real
+	
+	{Laço de repetição para todos os 100 circulos}
+	para i <- 0 até 99 faça
+		escreva('Digite a Coordenadas X e Y, e o raio do Circulo:')
+		{Lendo dados dos circulos e incluindo nas variáveis dos registro}
+		leia (circulo.pontoX)
+		leia (circulo.pontoY)
+		leia (circulo.raio)
+
+		{Calculando área a partir do raio}
+		area <- (raio*raio) * 3.14
+
+		{Resultado}
+		escreva('A area do circulo e ' + area)
+	fim-para
+ 
+fim-algoritmo {Fim do Algoritmo}

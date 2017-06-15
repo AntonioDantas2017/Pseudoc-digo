@@ -1,0 +1,7 @@
+{ Atividade AA4.3 Área de um Círculo (Algoritmo)}
+{ Antonio Josivaldo Dantas Filho }
+{ RA 580961 G7 Sistemas de Informação }
+
+função ÁreaCírculo (raio : real) : real
+	retorna 3.14 * (raio * raio)
+fim-função

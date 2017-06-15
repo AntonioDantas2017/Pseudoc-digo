@@ -1,0 +1,22 @@
+algoritmo {Início Algoritmo}
+
+	{Declarando novo tipo de Variável}
+	tipo   tPonto : registro {incluindo variáveis dentro do registro}
+				latitude,
+				longitude : inteiro
+			fim-registro
+
+	{Declarando as variável}
+	declare ponto1, ponto2 : tPonto	
+	
+	escreva('Digite a latitude e longitude dos dois pontos:')
+	{Lendo os dados para variáveis de registro}
+	leia (ponto1.latitude)
+	leia (ponto1.longitude)
+	leia (ponto2.latitude)
+	leia (ponto2.longitude)
+
+	{Resultado}
+	escreva('Distancia entre os dois pontos : ' + raizq((ponto2.latitude - ponto1.latitude) * (ponto2.latitude - ponto1.latitude) + (ponto2.longitude - ponto1.longitude) * (ponto2.longitude - ponto1.longitude)))
+	
+fim-algoritmo {Fim do Algoritmo}

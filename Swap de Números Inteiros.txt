@@ -1,0 +1,11 @@
+{ Atividade AA4.8: Swap de Números Inteiros (Algoritmos)
+{ Antonio Josivaldo Dantas Filho }
+{ RA 580961 G7 Sistemas de Informação }
+
+procedimento Swap(var n1 : inteiro, var n2 : inteiro)
+	declare 
+		aux : inteiro
+	aux <- n1
+	n1 <- n2
+	n2 <- aux
+fim-procedimento

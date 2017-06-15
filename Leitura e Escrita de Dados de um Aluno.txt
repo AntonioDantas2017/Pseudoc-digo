@@ -1,0 +1,18 @@
+{ Atividade AA4.7: Leitura e Escrita de Dados de um Aluno (Algoritmo)}
+{ Antonio Josivaldo Dantas Filho }
+{ RA 580961 G7 Sistemas de Informação }
+
+tipo tAluno estrutura
+	ra : inteiro
+	nome : char[200]
+	ira : real
+	sexo : char
+fim-estrutura
+
+procedimento LerDadosAluno(var aluno : tAluno)
+	leia(aluno.ra,aluno.nome,aluno.ira,aluno.sexo)
+fim-procedimento
+
+procedimento EscreverDadosAluno(var aluno : tAluno)
+	escreva(aluno.ra,aluno.nome,aluno.ira,aluno.sexo)	
+fim-procedimento
